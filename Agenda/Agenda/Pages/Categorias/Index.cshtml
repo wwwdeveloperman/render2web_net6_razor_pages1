@@ -50,11 +50,10 @@
                 <td>@Html.DisplayFor( m => categoria.Id) </td>
                 <td>@Html.DisplayFor( m => categoria.nombre) </td>
                 <td>@Html.DisplayFor( m => categoria.FechaCreacion ) </td>
-
                 <td>
-                <a class="btn btn-success" asp-page="../Categorias/Detalle" asp-route-id ="@categoria.Id" >Detalle</a>
-                <a class="btn btn-warning" asp-page="../Categorias/Editar" asp-route-id ="@categoria.Id" >Editar</a>
-                <a class="btn btn-danger"  asp-page="../Categorias/Borrar" asp-route-id ="@categoria.Id" >Borrar</a>
+                    <a class="btn btn-success" asp-page="../Categorias/Detalle" asp-route-id ="@categoria.Id" >Detalle</a>
+                    <a class="btn btn-warning" asp-page="../Categorias/Editar" asp-route-id ="@categoria.Id" >Editar</a>
+                    <a class="btn btn-danger"  asp-page="../Categorias/Borrar" asp-route-id ="@categoria.Id" >Borrar</a>
                 </td>
 
 

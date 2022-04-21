@@ -20,11 +20,11 @@
           <h2 class="text-info"> Detalle de Categoria:@Html.DisplayFor(m => m.Categorias.Id)  </h2>
           
           @* CLASE BootStrap 5.0 List-group *@
-          <ul class="list-group">
-          <li class="list-group-item"> @Html.DisplayFor(m => m.Categorias.Id)             </li>
-          <li class="list-group-item"> @Html.DisplayFor(m => m.Categorias.nombre)         </li>
-          <li class="list-group-item"> @Html.DisplayFor(m => m.Categorias.FechaCreacion)  </li>
-
+              <ul class="list-group">
+              <li class="list-group-item">Id: @Html.DisplayFor(m => m.Categorias.Id)             </li>
+              <li class="list-group-item">Nombre: @Html.DisplayFor(m => m.Categorias.nombre)         </li>
+              <li class="list-group-item">Fecha de Creacion: @Html.DisplayFor(m => m.Categorias.FechaCreacion)  </li>
+          </ul>
 
       </div>
   </div>

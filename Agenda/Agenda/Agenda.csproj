@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Categorias\Borrar.cshtml" />
     <Content Remove="Pages\Categorias\Editar.cshtml" />
   </ItemGroup>
 
@@ -28,7 +29,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Categorias\Borrar.cshtml" />
     <None Include="Pages\Categorias\Editar.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\Categorias\Editar - Copia - Copia.cshtml.cs">
+      <DependentUpon>Editar - Copia.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Categorias\Editar - Copia.cshtml.cs">
+      <DependentUpon>Editar.cshtml.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

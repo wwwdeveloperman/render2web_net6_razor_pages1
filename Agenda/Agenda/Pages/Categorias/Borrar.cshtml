@@ -1,0 +1,48 @@
+﻿@page
+@model Agenda.Pages.Categorias.BorrarModel     
+
+@*                              ^^^^^^^^^     BorrarModel   <-----   OJO   *@
+
+
+@{
+    ViewData["Title"] = "Borrar una Categoria";
+}
+
+
+<div class="container">
+
+
+  <div class="row">
+      <div class="col-8 offset-2">
+          <h2 class="text-info">BORRAR CATEGORIA</h2>
+          <form method="POST">
+
+            <input type="hidden" asp-for="Categorias.Id" />            <!--        OJO          -->
+
+            <div class="mb-3">
+                <label asp-for="Categorias.nombre" class="col-form-label">    </label>
+                <input asp-for="Categorias.nombre" class="form-control" readonly placeholder="Ingrese Nombre de categoria" />
+                <span asp-validation-for="Categorias.nombre" class="text-danger">   </span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Categorias.FechaCreacion" class="col-form-label">    </label>
+                <input asp-for="Categorias.FechaCreacion" class="form-control readonly " />
+                <span asp-validation-for="Categorias.FechaCreacion" class="text-danger">   </span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" >Borrar</button>
+
+
+          </form>
+      </div>
+  </div>
+
+
+  <div class ="row">
+      <div class="col-6">
+          <a asp-page="Index" class="btn btn-success">Regresar</a>
+      </div>
+  </div>
+
+</div>

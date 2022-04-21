@@ -26,6 +26,7 @@ namespace Agenda.Pages.Categorias
 
         [BindProperty]
         // enlazar modelo Categoria con Tabla Categoria.
+        // Categorias tipo Categoria (del modelo)
         //using Agenda.Modelos;
         public Categoria Categorias { get; set; }
         // ------------------------------------------------------
