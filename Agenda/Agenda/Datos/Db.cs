@@ -18,6 +18,7 @@ namespace Agenda.Datos
         // using Agenda.Modelos; -> clase Categoria()
         // Darle nombre a la tabla para crearse con Migration, "Categorias"
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Contacto> Contactos { get; set; }
 
     }// class
 }
