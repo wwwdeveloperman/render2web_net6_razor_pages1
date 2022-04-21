@@ -1,0 +1,50 @@
+﻿@page
+@model Agenda.Pages.Categorias.DetalleModel
+@{
+    ViewData["Title"] = "Detalle de Categoria";
+
+}
+
+@* 
+   Copiar desde Editar.cshtml y sacarle el FORM y las validaciones. No habran
+   ediciones. es solo un Display. 
+   Ponerle un List Group de BootStrap 5 para hacer un display de datos.
+
+*@
+
+<div class="container">
+
+
+  <div class="row">
+      <div class="col-8 offset-2">
+          <h2 class="text-info"> Detalle de Categoria:@Html.DisplayFor(m => m.Categorias.Id)  </h2>
+          
+          @* CLASE BootStrap 5.0 List-group *@
+          <ul class="list-group">
+          <li class="list-group-item"> @Html.DisplayFor(m => m.Categorias.Id)             </li>
+          <li class="list-group-item"> @Html.DisplayFor(m => m.Categorias.nombre)         </li>
+          <li class="list-group-item"> @Html.DisplayFor(m => m.Categorias.FechaCreacion)  </li>
+
+
+      </div>
+  </div>
+
+
+  <div class ="row">
+      <div class="col-6">
+          <a asp-page="Index" class="btn btn-success">Regresar</a>
+      </div>
+  </div>
+
+</div>
+
+
+
+@*  no se necesita validaciones x q no hay edicion.
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+
+}
+ *@
