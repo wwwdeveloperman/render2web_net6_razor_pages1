@@ -32,6 +32,20 @@
                 <span asp-validation-for="ContactoVM.Contactos.Telefono" class="text-danger">   </span>
             </div>
 
+
+            <!--  COMBO BOX Lista de Categorias p seleccionar  -->
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.Categorias" class="col-form-label">    </label>
+                <Select asp-for="ContactoVM.Contactos.CategoriaId" 
+                        asp-items="@(new SelectList(Model.ContactoVM.ListaCategorias, "Id", "nombre") )"
+                        class="form-control" >
+                    
+                </select>
+                <span asp-validation-for="ContactoVM.Contactos.Telefono" class="text-danger">   </span>
+            </div>
+            <!---      -----------------------------------------------------------------------  -->
+
             <div class="mb-3">
                 <label asp-for="ContactoVM.Contactos.FechaCreacion" class="col-form-label">    </label>
                 <input asp-for="ContactoVM.Contactos.FechaCreacion" class="form-control" />

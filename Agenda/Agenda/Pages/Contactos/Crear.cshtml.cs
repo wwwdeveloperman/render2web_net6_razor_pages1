@@ -40,6 +40,24 @@ namespace Agenda.Pages.Contactos
 
 
 
+        public async Task<IActionResult> OnPost()
+        {
+            if (ModelState.IsValid)  // todas las validaciones estan correctas.
+            {
+                await _contexto.Contactos.AddAsync(ContactoVM.Contactos);
+                // Save on Database:
+                await _contexto.SaveChangesAsync();
+                return RedirectToPage("Index");
+
+            }
+            else
+            {
+                return Page();
+            }
+
+
+        }// OnPost()
+
 
     }
 }
