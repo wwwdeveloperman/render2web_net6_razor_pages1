@@ -65,7 +65,7 @@
 
     @if (Model.Contactos.Count() > 0)
     {
-        <table  id=""TblContactos" class="table table-striped table-bordered"
+        <table  id="TblContactos" class="table table-striped table-bordered"
                  style="width:100%;">
 
             <thead>
@@ -75,7 +75,7 @@
                     <th> @Html.DisplayNameFor(m => m.Contactos.FirstOrDefault().Email) </th>
                     <th> @Html.DisplayNameFor(m => m.Contactos.FirstOrDefault().Telefono) </th>
                     <th> @Html.DisplayNameFor(m => m.Contactos.FirstOrDefault().FechaCreacion) </th>
-                    <th> @Html.DisplayNameFor(m => m.Contactos.FirstOrDefault().Categorias.nombre) </th>
+                    <th> @Html.DisplayNameFor(m => m.Contactos.FirstOrDefault().Categorias) </th>
                 </tr>
             </thead>
 
@@ -91,7 +91,7 @@
                     <td>@Html.DisplayFor( m => vcontacto.Email)             </td>
                     <td>@Html.DisplayFor( m => vcontacto.Telefono)          </td>
                     <td>@Html.DisplayFor( m => vcontacto.FechaCreacion )    </td>
-                    <td>@Html.DisplayFor( m => vcontacto.Categorias)        </td>
+                    <td>@Html.DisplayFor( m => vcontacto.Categorias.nombre)        </td>
                     <td>
                         <a class="btn btn-success" asp-page="../Contactos/Detalle" asp-route-id ="@vcontacto.Id" >Detalle</a>
                         <a class="btn btn-warning" asp-page="../Contactos/Editar"  asp-route-id ="@vcontacto.Id" >Editar</a>

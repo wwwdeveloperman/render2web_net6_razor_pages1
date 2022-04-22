@@ -1,0 +1,66 @@
+﻿@page
+@model Agenda.Pages.Contactos.CrearModel
+@{
+     ViewData["Title"] = "Crear un Contactos";
+}
+
+
+
+<div class="container">
+
+
+  <div class="row">
+      <div class="col-8 offset-2">
+          <h2 class="text-info">CREACION DE CONTACTOS </h2>
+          <form method="post">
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.nombre" class="col-form-label">    </label>
+                <input asp-for="ContactoVM.Contactos.nombre" class="form-control" placeholder="Ingrese Nombre Contacto" />
+                <span asp-validation-for="ContactoVM.Contactos.nombre" class="text-danger">   </span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.Email" class="col-form-label">    </label>
+                <input asp-for="ContactoVM.Contactos.Email" class="form-control" placeholder="Ingrese Email" />
+                <span asp-validation-for="ContactoVM.Contactos.Email" class="text-danger">   </span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.Telefono" class="col-form-label">    </label>
+                <input asp-for="ContactoVM.Contactos.Telefono" class="form-control" placeholder="Ingrese el nro de Telefono " />
+                <span asp-validation-for="ContactoVM.Contactos.Telefono" class="text-danger">   </span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.FechaCreacion" class="col-form-label">    </label>
+                <input asp-for="ContactoVM.Contactos.FechaCreacion" class="form-control" />
+                <span asp-validation-for="ContactoVM.Contactos.FechaCreacion" class="text-danger">   </span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" >Aceptar</button>
+
+
+          </form>
+      </div>
+  </div>
+
+
+  <div class ="row">
+      <div class="col-6">
+          <a asp-page="Index" class="btn btn-success">Regresar</a>
+      </div>
+  </div>
+
+</div>
+
+
+
+
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+
+}
+
