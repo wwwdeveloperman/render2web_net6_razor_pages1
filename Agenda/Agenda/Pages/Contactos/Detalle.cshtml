@@ -1,0 +1,32 @@
+﻿@page
+@model Agenda.Pages.Contactos.DetalleModel
+
+@{  ViewData["Title"] = "Detalle de Contactos"; }
+
+
+<div class="container">
+
+  <div class="row">
+      <div class="col-8 offset-2">
+          <h2 class="text-info"> Detalle de Contacto:@Html.DisplayFor(m => m.Contactos.Id)  </h2>
+          
+          @* CLASE BootStrap 5.0 List-group *@
+          <ul class="list-group">
+
+              <li class="list-group-item">Id               : @Html.DisplayFor(m => m.Contactos.Id)                 </li>
+              <li class="list-group-item">Nombre           : @Html.DisplayFor(m => m.Contactos.nombre)             </li>
+              <li class="list-group-item">Nombre           : @Html.DisplayFor(m => m.Contactos.Email)              </li>
+              <li class="list-group-item">Nombre           : @Html.DisplayFor(m => m.Contactos.Telefono)           </li>
+              <li class="list-group-item">Nombre           : @Html.DisplayFor(m => m.Contactos.Categorias.nombre)  </li>
+              <li class="list-group-item">Fecha de Creacion: @Html.DisplayFor(m => m.Contactos.FechaCreacion)      </li>
+          </ul>
+
+      </div>
+  </div>
+  <div class ="row">
+      <div class="col-6">
+          <a asp-page="Index" class="btn btn-success">Regresar</a>
+      </div>
+  </div>
+
+</div>
