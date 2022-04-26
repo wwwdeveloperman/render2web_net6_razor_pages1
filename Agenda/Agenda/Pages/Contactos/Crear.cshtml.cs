@@ -12,10 +12,11 @@ namespace Agenda.Pages.Contactos
 {
     public class CrearModel : PageModel
     {
-        // using Agenda.Datos -> Db
+
+        //1. using Agenda.Datos -> Db
         private readonly Db _contexto;
         
-        // CONSTRUCTOR
+        //2. CONSTRUCTOR
         public CrearModel(Db contexto)
         {
             _contexto = contexto; 
@@ -23,11 +24,13 @@ namespace Agenda.Pages.Contactos
         }
 
 
-
+        // 3.
         [BindProperty]
         // using Agenda.Modelos.ViewModels -> CrearContactoVM
         public CrearContactoVM ContactoVM { get; set; }
 
+        
+        //4.
         public async Task<IActionResult>  OnGet()
         {
             ContactoVM = new CrearContactoVM()
@@ -39,7 +42,7 @@ namespace Agenda.Pages.Contactos
         }
 
 
-
+        //5.
         public async Task<IActionResult> OnPost()
         {
             if (ModelState.IsValid)  // todas las validaciones estan correctas.

@@ -2,5 +2,76 @@
 @model Agenda.Pages.Contactos.BorrarModel
 
 @{
+    ViewData["Title"] = "Borrado de Registro";
 }
+
+
+<div class="container">
+
+
+  <div class="row">
+      <div class="col-8 offset-2">
+          <h2 class="text-info">BORRAR CONTACTO ->@Html.DisplayFor(m => m.ContactoVM.Contactos.Id) </h2>
+
+
+          <form method="post">
+            
+            <!-- CAMPO INPUT PARA LA EDICION/BORRADO :-->
+            <input type="hidden" asp-for="ContactoVM.Contactos.Id" />
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.nombre" class="col-form-label" >    </label>
+                <input asp-for="ContactoVM.Contactos.nombre" class="form-control" placeholder="Ingrese Nombre Contacto" readonly />
+                
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.Email" class="col-form-label">    </label>
+                <input asp-for="ContactoVM.Contactos.Email" class="form-control" placeholder="Ingrese Email" readonly/>
+                
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.Telefono" class="col-form-label">    </label>
+                <input asp-for="ContactoVM.Contactos.Telefono" class="form-control" placeholder="Ingrese el nro de Telefono " readonly/>
+
+            </div>
+
+
+            <!--  COMBO BOX Lista de Categorias p seleccionar  -->
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.Categorias" class="col-form-label">    </label>
+                <!-- 
+                <Select asp-for="ContactoVM.Contactos.CategoriaId" 
+                        asp-items="@(new SelectList(Model.ContactoVM.ListaCategorias, "Id", "nombre") )"
+                        class="form-control" >
+                    
+                </select>
+                -->
+                <input asp-for="ContactoVM.Contactos.Categorias.nombre" class="form-control" placeholder="Ingrese la categoria " readonly/>
+                
+            </div>
+            <!---  -------------------------------------------------------------------------------  -->
+
+            <div class="mb-3">
+                <label asp-for="ContactoVM.Contactos.FechaCreacion" class="col-form-label">    </label>
+                <input asp-for="ContactoVM.Contactos.FechaCreacion" class="form-control" readonly />
+                
+            </div>
+
+            <button type="submit" class="btn btn-primary" >Aceptar</button>
+
+
+          </form>
+
+      </div>
+  </div>
+
+
+</div>
+
+
+
+
 
