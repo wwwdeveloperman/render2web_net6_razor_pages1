@@ -39,8 +39,6 @@ namespace Agenda.Pages.Categorias
         }
 
         
-        
-        
         // OnPost()    Funciona al tocar el boton [Aceptar] para grabar.
         public async Task<IActionResult> OnPost()
         {
